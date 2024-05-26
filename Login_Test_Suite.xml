@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Login Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="TestModules.Base.BaseTest" />
+    </listeners>
+    <parameter name = "URL" value = "https://www.saucedemo.com/"/>
+    <test verbose="2" name="SauceDemo - Chrome Login Test">
+        <parameter name = "BrowserType" value = "Chrome"/>
+        <classes>
+            <class name="TestModules.Login.LoginModuleTest">
+            <methods>
+                <include name="LoginWithValidCredentials" />
+                <include name="LoginWithValidUsernameAndInValidPassword" />
+                <include name="LoginWithInValidUsernameAndValidPassword" />
+                <include name="LoginWithEmptyUsername" />
+                <include name="LoginWithEmptyPassword" />
+                <include name="LoginWithEmptyUsernameAndEmptyPassword" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+    <test verbose="2" name="SauceDemo - Edge Login Test">
+        <parameter name = "BrowserType" value = "Edge"/>
+        <classes>
+            <class name="TestModules.Login.LoginModuleTest">
+            <methods>
+                <include name="LoginWithValidCredentials" />
+                <include name="LoginWithValidUsernameAndInValidPassword" />
+                <include name="LoginWithInValidUsernameAndValidPassword" />
+                <include name="LoginWithEmptyUsername" />
+                <include name="LoginWithEmptyPassword" />
+                <include name="LoginWithEmptyUsernameAndEmptyPassword" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite>
+
+
