@@ -71,7 +71,7 @@ public class BaseTest implements ITestListener{
         if (driver != null) {
 
             try {
-                //driver.quit();
+                driver.quit();
             } catch (WebDriverException e) {
                 System.out.println("***** CAUGHT EXCEPTION IN DRIVER TEARDOWN *****");
                 throw e;
@@ -92,7 +92,7 @@ public class BaseTest implements ITestListener{
 
             // Create a directory if it doesn't exist
             // Update with your desired directory
-            String screenshotDirectory = "C:\\Users\\DKRORY\\IdeaProjects\\NopCommerce\\Screenshots";
+            String screenshotDirectory = "C:\\Users\\DKRORY\\Desktop\\SauceDemo\\SauceDemo\\Screenshots";
             Path directoryPath = Paths.get(screenshotDirectory);
             Files.createDirectories(directoryPath);
 

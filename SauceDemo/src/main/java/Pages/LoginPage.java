@@ -10,7 +10,6 @@ public class LoginPage extends BaseClass {
     final private By passwordField = By.id("password");
     final private By loginBtn = By.id("login-button");
     final private By loginErrorMessage = By.className("error-message-container");
-    //final private By unSuccessfulLoginMessage = By.className("error-message-container");
     final private By errorMessage = By.cssSelector("[data-test='error']");
     final private By productsLocator = By.cssSelector("[data-test='title']");
 
@@ -35,17 +34,10 @@ public class LoginPage extends BaseClass {
     public Boolean isLoginErrorMSGDisplayed(){
         return isDisplayed(loginErrorMessage);
     }
-
-    /*public Boolean myAccountAppear(){
-        return waitToPresent(myAccount).isDisplayed();
-    }*/
     public Boolean isLoginBtnDisplayed(){
         return isDisplayed(loginBtn);
     }
-    /*public Boolean unSuccessfulLogin(){
-        //return waitToPresent(unSuccessfulLoginMessage).isDisplayed();
-        return isDisplayed(unSuccessfulLoginMessage);
-    }*/
+
 
 }
 
